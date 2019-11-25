@@ -25,7 +25,8 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "commit:cz": "git-cz"
+    "commit:cz": "git-cz",
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
