@@ -1,0 +1,54 @@
+{
+  "name": "create-props-getter",
+  "version": "0.1.0",
+  "description": "Create a getter to return typed props concerning default props.",
+  "keywords": [
+    "props",
+    "default-props",
+    "props-getter",
+    "react-component-props"
+  ],
+  "license": "MIT",
+  "author": "ricky",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rickkky/create-props-getter"
+  },
+  "main": "dist/index.js",
+  "module": "dist/create-props-getter.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "commit:cz": "git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && tsdx lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@types/jest": "^24.0.23",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.1.0",
+    "pretty-quick": "^2.0.1",
+    "standard-version": "^7.0.1",
+    "tsdx": "^0.11.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.2"
+  }
+}
