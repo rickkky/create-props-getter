@@ -4,12 +4,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [0.2.0](https://github.com/rickkky/create-props-getter/compare/v0.1.0...v0.2.0) (2019-11-29)
 
+
 ### Features
 
-- add createDefaultProps method ([08f4377](https://github.com/rickkky/create-props-getter/commit/08f437767ecb9adea218399f61d6c60018a215be))
+* add createDefaultProps method ([08f4377](https://github.com/rickkky/create-props-getter/commit/08f437767ecb9adea218399f61d6c60018a215be))
 
 ## 0.1.0 (2019-11-25)
 
+
 ### Features
 
-- createPropsGetter ([a886e18](https://github.com/rickkky/create-props-getter/commit/a886e18ffd8a580282901d9f8efb8e0c5edcef50))
+* createPropsGetter ([a886e18](https://github.com/rickkky/create-props-getter/commit/a886e18ffd8a580282901d9f8efb8e0c5edcef50))
