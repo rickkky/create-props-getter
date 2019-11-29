@@ -13,7 +13,7 @@ npm i -S create-props-getter
 
 ## Usage
 
-```typescript
+```tsx
 import React, { Component } from 'react'
 import { createPropsGetter, createDefaultProps } from '../src'
 
