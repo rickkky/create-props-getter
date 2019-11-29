@@ -1,14 +1,20 @@
-type ExcludeDefaults<P, DP> = Pick<P, Exclude<keyof P, keyof DP>>
+export function createDefaultProps<T extends object>(defaultProps: T) {
+  return Object.freeze(defaultProps)
+}
 
-export type InnerProps<
+export type Diff<T, K> = Pick<T, Exclude<keyof T, keyof K>>
+
+export type WithDefault<
   P extends object,
   DP extends Partial<P> = Partial<P>
-> = DP & ExcludeDefaults<P, DP>
+> = DP & Diff<P, DP>
 
-export default function createPropsGetter<DP extends object>(
+export function createPropsGetter<DP extends Readonly<object>>(
   _defaultProps?: DP,
 ) {
-  return function<P extends Partial<DP>>(props: P) {
-    return (props as any) as InnerProps<P, DP>
+  return function<P extends Partial<DP>>(props: P): WithDefault<P, DP> {
+    return props as any
   }
 }
+
+export default createPropsGetter

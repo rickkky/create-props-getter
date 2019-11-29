@@ -1,4 +1,4 @@
-import createPropsGetter from '../src'
+import { createPropsGetter } from '../src'
 
 const defaultProps = {
   a: 1,
