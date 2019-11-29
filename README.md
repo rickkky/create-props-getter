@@ -15,35 +15,31 @@ npm i -S create-props-getter
 
 ```typescript
 import React, { Component } from 'react'
-import createPropsGetter from 'create-props-getter'
-
-const defaultProps = {
-  a: true,
-  b: 2,
-  c: '3' as '1' | '2' | '3',
-}
+import { createPropsGetter, createDefaultProps } from '../src'
 
 type Props = {
-  d: number
+  onClick: (e: React.MouseEvent) => void
+  children: React.ReactNode
 } & Partial<typeof defaultProps>
+
+const defaultProps = createDefaultProps({
+  color: 'green' as 'red' | 'green' | 'blue',
+  type: 'button' as 'button' | 'submit',
+})
 
 const getProps = createPropsGetter(defaultProps)
 
-class App extends Component<Props> {
-  static defaultProps = defautProps
-
-  constructor(receivedProps: Props) {
-    super(receivedProps)
-
-    const props = getProps(this.props)
-
-    // ...
-  }
+class Button extends Component<Props> {
+  static readonly defaultProps = defaultProps
 
   render() {
-    const props = getProps(this.props)
+    const { color, type, onClick: handleClick, children } = getProps(this.props)
 
-    // ...
+    return (
+      <button type={type} className={color} onClick={handleClick}>
+        {children}
+      </button>
+    )
   }
 }
 ```
