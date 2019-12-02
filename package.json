@@ -1,6 +1,6 @@
 {
   "name": "create-props-getter",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Create a getter used for resolving defaultProps within component implementation.",
   "keywords": [
     "props",
