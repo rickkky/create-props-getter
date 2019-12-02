@@ -15,7 +15,7 @@ npm i -S create-props-getter
 
 ```tsx
 import React, { Component } from 'react'
-import { createPropsGetter, createDefaultProps } from '../src'
+import createPropsGetter, { createDefaultProps } from 'create-props-getter'
 
 type Props = {
   onClick: (e: React.MouseEvent) => void
